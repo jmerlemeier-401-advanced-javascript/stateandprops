@@ -7,7 +7,7 @@ import React from 'react';
 const Header = (props) => {
   return (
     //'title' key comees from App in teh render function return
-    <h1>{props.title}</h1>
+    <h1 onClick={props.print}>{props.title}</h1>
   )
 }
 
