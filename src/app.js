@@ -27,9 +27,11 @@ class App extends React.Component {
       <Form handleData={this.handleData} />
       <ul>
       {/* can inject raw JS into this with curlies */}
-      {this.state.results.map(person => {
-        return <li key={person.name}>{person.name}</li>
-      })}
+      {
+        this.state.results.map(person => {
+          return <li key={person.name}>{person.name}</li>
+        })
+      }
       </ul>
       <Footer display={this.state.copyright} />
       </>

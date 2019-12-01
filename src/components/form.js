@@ -5,9 +5,10 @@ class Form extends React.Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
-    let data = await superagent.get('https://swapi.co/api/people?format=json');
+    console.log('request started');
+    let data = await superagent.get('https://swapi.co/api/people/?format=json');
     // console.log(data);
-    let count = data.bodt.count;
+    let count = data.body.count;
     let results = data.body.results;
 
     this.props.handleData(count, results);
